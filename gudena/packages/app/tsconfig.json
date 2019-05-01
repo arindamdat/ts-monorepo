@@ -1,0 +1,18 @@
+{
+    "extends": "../tsconfig.settings.json",
+    "compilerOptions": {
+        "outDir": "../../dist/app",
+        "composite": true,
+        "rootDir": "src",
+        "baseUrl": ".",
+        "paths": {
+            "~/dto": ["../shared/dto"]
+        }
+    },
+    "references": [
+        {
+            "path": "../shared/dto"
+        }
+    ],
+    "exclude": ["webpack.config.js"]
+}

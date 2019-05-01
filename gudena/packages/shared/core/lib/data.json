@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "username": "user1",
+            "loggedInOn": "2019-04-01T17:45:42.881Z",
+            "token": "token1"
+        },
+        {
+            "username": "user2",
+            "loggedInOn": "2019-03-29T17:05:17.257Z",
+            "token": "token2"
+        }
+    ]
+}

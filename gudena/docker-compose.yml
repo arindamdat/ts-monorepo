@@ -1,0 +1,32 @@
+version: "3"
+services: 
+ command-api: 
+  build: 
+   context: .
+   dockerfile: ./packages/api-command/Dockerfile
+  command: "yarn run command:start"
+  restart: always
+  volumes: 
+    - .:/application/:rw
+  ports: 
+    - "3012:3012"
+ query-api:
+  build: 
+   context: .
+   dockerfile: ./packages/api-query/Dockerfile
+  command: "yarn run query:start"
+  restart: always
+  volumes: 
+    - .:/application/:rw
+  ports: 
+    - "3011:3011"
+ client-app:
+  build: 
+   context: .
+   dockerfile: ./packages/app/Dockerfile
+  command: "yarn run app:start"
+  restart: always
+  volumes: 
+    - .:/application/:rw
+  ports: 
+    - "8082:8082"

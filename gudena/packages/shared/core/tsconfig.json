@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.settings.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "../../../dist/shared/core",
+        "composite": true,
+        "rootDir": ".",
+        "paths": {
+            "~/dto": ["../dto"]
+        }
+    },
+    "references": [
+        {
+            "path": "../dto"
+        }
+    ]
+}

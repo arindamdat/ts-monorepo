@@ -1,0 +1,57 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-eslint-rules"],
+  "jsRules": {
+    "no-unused-expression": true
+  },
+  "rules": {
+    "eofline": true, // mhp
+    "trailing-comma": false,
+    "no-console": false, // mhp: should this be on? we use winston? Or could bet turne on to clean up now and then only
+    "no-bitwise": true, // mhp
+    "max-line-length": [true, 120], // for readability especially in GIT and when reviewing together on projector
+    "ordered-imports": [false], // we should order by name, NPM imports first, then local packages and then local imports
+    "member-ordering": [
+      true,
+      {
+        "order": "fields-first"
+      }
+    ], // mhp
+    "curly": true, // mhp
+    "interface-name": [true, "never-prefix"],
+    "array-type": [true, "array-simple"],
+    "arrow-parens": true, // for now
+    "member-access": [true, "no-public"], // this should really be done to prevent accidental leakage and use due to intellisense
+    "no-empty-interface": true, // mhp added 2018-12-28
+    "no-empty": false, // ?
+    "object-literal-sort-keys": false,
+    "no-unused-expression": true,
+    "max-classes-per-file": [true, 1],
+    "variable-name": [true, "ban-keywords", "check-format"], // just precaution
+    "one-variable-per-declaration": [true],
+    "no-var-requires": false, // change to true, when we know we can: TODO: AD
+    "prefer-for-of": true, // TODO: AD - get rid of Babel and do ESnext / ES7
+    "interface-over-type-literal": false, // we should use interfaces for interfaces and types for types
+    "indent": [true, "spaces", 2],
+    // added from Lars'
+    "no-internal-module": true,
+    "no-trailing-whitespace": true,
+    "no-null-keyword": false, // for now
+    "prefer-const": true,
+    "jsdoc-format": true,
+    "class-name": true,
+    "comment-format": [true, "check-space"],
+    "one-line": [true, "check-open-brace", "check-whitespace"], //  mhp - or false?
+    "no-var-keyword": true,
+    "quotemark": [true, "double", "avoid-escape"], // mhp - not good with avoid-escape
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "whitespace": true,
+    "typedef-whitespace": true,
+    "no-irregular-whitespace": true,
+    "no-multi-spaces": true,
+    "array-bracket-spacing": [true, "never"],
+    "block-spacing": true,
+    "object-curly-spacing": [true, "always"]
+  },
+  "rulesDirectory": []
+}

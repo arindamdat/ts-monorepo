@@ -1,0 +1,21 @@
+{
+    "extends": "../tsconfig.settings.json",
+    "compilerOptions": {
+        "outDir": "../../dist/api-command",
+        "composite": true,
+        "rootDir": "src",
+        "baseUrl": ".",
+        "paths": {
+            "~/dto": ["../shared/dto"],
+            "~/core": ["../shared/core"]
+        }
+    },
+    "references": [
+        {
+            "path": "../shared/core"
+        },
+        {
+            "path": "../shared/dto"
+        }
+    ]
+}
