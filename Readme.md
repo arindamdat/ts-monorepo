@@ -27,3 +27,8 @@ Also, we are now NOT treating shared modules as different packages, rather we ar
 As any developer can reference any shared module by it's relaitve path, it's hard to maintain integrity of the Architecture, where some modules are not supposed to be referenced by some modules. Reference: Gudena Wiki --> Onion Architecture where dependency is always towards the center (inwards).
 #### Solution:
 We can have an understanding that shared modules will always be referenced with an "alias". So, the developer must define the alias on the tsconfig file of the consumer module. So, just by looking at the tsconfig file the dependencies (on other shared modules) of a particular module will be immediately visible.
+
+#### Few words about Yarn workspace
+- The root package.json is supposed to container dev-dependencies required to bootstrap the application
+- If a third-party package "x" is required in any module (say, api-query), the command would be like
+`yarn workspace api-query add x`
