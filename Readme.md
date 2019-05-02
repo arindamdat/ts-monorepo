@@ -1,4 +1,5 @@
 # TS Monorepo
+This repository is inspired from Typescript mono-repo. That means, multiple applications can be accomodated within the same repository.
 #### Highlights:
 This repository uses
 - Typescript Project Reference
